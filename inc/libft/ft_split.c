@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: onurgokkaya <onurgokkaya@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ogokkaya <ogokkaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:44:28 by ogokkaya          #+#    #+#             */
-/*   Updated: 2024/08/22 14:30:27 by onurgokkaya      ###   ########.fr       */
+/*   Updated: 2024/08/23 18:04:17 by ogokkaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "../cub3d.h"
-
+#include "libft.h"
+#include <stdio.h>
 static size_t	ft_nb_words(char const *s, char c)
 {
 	size_t	i;
@@ -69,7 +69,7 @@ char	**ft_split(t_cub3d *cub, char const *s, char c)
 		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (ft_nb_words(s, c) + 1));
 	if (my_malloc(cub->block, tab))
-		return (end_malloc(cub), exit(EXIT_FAILURE), NULL);
+		return (end_malloc(cub), printf("s\n"), exit(EXIT_FAILURE),  NULL);
 	i = 0;
 	next_word = (char *)s;
 	next_word_len = 0;
@@ -77,8 +77,8 @@ char	**ft_split(t_cub3d *cub, char const *s, char c)
 	{
 		ft_get_next_word(&next_word, &next_word_len, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_word_len + 1));
-		if (my_malloc(cub->block,tab[i]))
-			return (end_malloc(cub), exit(EXIT_FAILURE), NULL);
+		if (my_malloc(cub->block, tab[i]))
+			return (end_malloc(cub),  printf("d\n"), exit(EXIT_FAILURE), NULL);
 		ft_strlcpy(tab[i], next_word, next_word_len + 1);
 		i++;
 	}

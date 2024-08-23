@@ -15,10 +15,14 @@
 typedef struct s_cub3d
 {
 	char 			   *map_name;
+	char 				**map;
 	char 				*so_path;
 	char 				*no_path;
 	char 				*we_path;
 	char 				*ea_path;
+	int 				c_colour;
+	int 				f_colour;
+	int 				map_size;
 	int 				compass_count;
 	int 				map_fd;
 	struct s_block     *block;
@@ -40,5 +44,7 @@ void 			so_path(t_cub3d *cub, char **path);
 void 			no_path(t_cub3d *cub, char **path);
 void 			we_path(t_cub3d *cub, char **path);
 void    		ea_path(t_cub3d *cub, char **path);
+void 			colour_f_and_c(t_cub3d *cub, char **path);
+int				get_color(char **color);
 
 #endif
