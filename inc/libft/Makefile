@@ -6,7 +6,7 @@
 #    By: onurgokkaya <onurgokkaya@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 21:37:52 by ogokkaya          #+#    #+#              #
-#    Updated: 2024/07/21 19:35:40 by onurgokkaya      ###   ########.fr        #
+#    Updated: 2024/08/27 21:26:29 by onurgokkaya      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ SRC  =  ft_isalpha.c	\
 	    ft_putstr_fd.c 	\
 	    ft_putendl_fd.c \
 	    ft_putnbr_fd.c\
-		ft_isspace.c
+		ft_isspace.c\
+		ft_char_isspace.c
 
 BONUS = ft_lstnew.c 	  \
 		ft_lstadd_front.c \

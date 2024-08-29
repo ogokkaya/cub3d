@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogokkaya <ogokkaya@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ulyildiz <ulyildiz@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:44:28 by ogokkaya          #+#    #+#             */
-/*   Updated: 2024/08/23 18:04:17 by ogokkaya         ###   ########.fr       */
+/*   Updated: 2024/08/29 13:20:18 by ulyildiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 #include "libft.h"
-#include <stdio.h>
+#include <stdio.h> //unutma
 static size_t	ft_nb_words(char const *s, char c)
 {
 	size_t	i;
